@@ -227,6 +227,9 @@ footer {
     }
 }
 @media (min-width: 800px) {
+    .main-img {
+        width: 75%;
+    }
     .compare-files {
         display: flex;
         flex-direction: row;
