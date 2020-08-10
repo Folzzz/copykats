@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CopyKats||Home</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+
+    <!-- CUSTOM STYLING -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<!-- <h1>welcome buddy</h1>
+<button onclick="mainWeb.logOut()">Log Out</button> -->
+
+<div class="container">
+    <div class="outer-bg"></div>
+    <header>
+        <nav>
+            <div class="logo-div">
+                <h2><span class="brand">CopyKats</span></h2>
+            </div>
+            <div class="toggle-div">
+                <div class="nav-hamburger">
+                    <img src="./images/icon-hamburger.svg" alt="nav-hamburger">
+                </div>
+                <div class="nav-item-div">
+                    <ul class="toggle-ul">
+                        <li class="list-item"><a href="#">HOME</a></li>
+                        <li class="list-item"><a href="#about">ABOUT</a></li>
+                        <li class="list-item"><a href="#user-guide">USER-GUIDE</a></li>
+                    </ul>
+                    <div class="logout">
+                        <button onclick="mainWeb.logOut()" class="logout">LOG-OUT</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="links">
+                <ul>
+                    <li class="list-item"><a href="#">HOME</a></li>
+                    <li class="list-item"><a href="#about">ABOUT</a></li>
+                    <li class="list-item"><a href="#user-guide">USER-GUIDE</a></li>
+                    <li class="logged"><span> &#x2b24; &nbsp; &nbsp;  &nbsp;</span> <button onclick="mainWeb.logOut()" class="logout">LOG-OUT</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <img src="./images/illustration-intro.png" alt="files illustration" class="main-img">
+
+        <div class="main-intro">
+            <p><span class="brand">CopyKats</span> is a tool to compare students write-ups and assignment. See <a href="#user-guide" class="brand">user guide</a> for how to use.</p>
+        </div>
+
+        <section class="files-section">
+            <div class="compare-files">
+                <div class="compare-files__first">
+                    <div class="compare-files__title">
+                        <h4>First file to compare</h4>
+                    </div>
+                    
+                
+                    <form class="compare-files__input" id="myForm">
+                        <label for="name">Full Name:</label>
+                        <br>
+                        <input type="text" name="name" id="name" placeholder="Student's Name" required>
+                        <br>
+                        <br>
+                        <label for="firstfile">File:</label>
+                        <br>
+                        <input type="file" name="" id="firstFile" accept="text/plain" required>
+                        <br>
+                        <br>
+                        <label for="preview">Preview File:</label>
+                        <br>
+                        <textarea name="preview" id="preview" cols="30" rows="20"></textarea>
+                        <br>
+                        <br>
+                        <button type="submit">Upload File</button>
+                        <!-- <textarea name="" id="prclass="file-input" eview" cols="30" rows="10"></textarea> -->
+                    </form>
+                </div>
+
+                <div class="compare-files__second">
+                    <div class="compare-files__title">
+                        <h4>Second file to compare</h4>
+                    </div>
+                
+                    <div class="compare-files__input">
+                        <label for="name-second">Full Name:</label>
+                        <br>
+                        <input type="text" name="name" id="name-second" placeholder="Student's Name" required>
+                        <br>
+                        <br>
+                        <label for="file">File:</label>
+                        <br>
+                        <input type="file" name="" id="secondFile" accept="text/plain" required>
+                        <br>
+                        <br>
+                        <label for="previewSecond">Preview File:</label>
+                        <br>
+                        <textarea name="previewSecond" id="previewSecond" cols="30" rows="20"></textarea>
+                        <br>
+                        <br>
+                        <button type="submit">Upload File</button>
+                    </div> 
+                </div>
+        
+            </div>
+
+            <div class="compare-btn-div">
+                <button class="compare-btn">Compare Files</button>
+            </div>
+
+
+            <div class="result-div">
+                <div class="result">
+                    <div class="load-div"></div>
+                    <div>
+                        <p>Percentage Similarity: <span class="percentage-value"></span></p>
+                    </div>
+                    <div>
+                        <p>Similar Content:</p>
+                        <div class="textarea-div">
+                            <textarea name="" id="similar-content" cols="30" rows="20"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="user-guide" class="guide sub-section">
+            <h2>User Guide</h2>
+            <p>
+                <span class="brand">CopyKats</span> allows you to compare two text files, and see the level of similarity in percentage and in content.
+            </p>
+            <p>
+                To use click on "Upload files" button to load your text from your local files.
+                CopyKats allow only the following text file extension: .TXT
+            </p>
+        </section>
+        <section id="about" class="about-us sub-section">
+            <h2>About <span class="brand">CopyKats</span></h2>
+            <P>This tool was created to compare students submissions for similarity, ensuring that students do not copy themselves when they submit essays and assignments.</P>
+        </section>
+    </main>
+
+    <hr>
+    <footer>Created By Olaniyan Foluso</footer>
+</div>
+
+    <script src="./js/firebase.js"></script>
+    <script src="./js/main.js" charset="utf-8"></script>
+</body>
+</html>

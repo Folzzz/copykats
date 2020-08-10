@@ -1,0 +1,252 @@
+:root {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f1f1f1;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+div.outer-bg {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1));
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 5rem;
+}
+header {
+    box-shadow: 0px 2px 2px  #9898a2;
+}
+/* navbar area style */
+nav {
+    width: 80%;
+    margin: 4rem auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-div {
+    margin-top: -1.5em;
+}
+.brand {
+    color: #3f51b5;
+}
+
+.links ul{
+    margin-top: 0;
+}
+.links li{
+    display: inline;
+    padding: 1rem;
+}
+/* .links ul .log-in a{
+    text-decoration: none;
+    color: #9898a2;
+} */
+
+.links .list-item a:hover
+/* .links ul .log-in a:hover*/
+{
+    text-decoration: underline;
+    color: #3f51b5;
+}
+.logged {
+    position: relative;
+}
+.logged span {
+    color: #9898a2;
+    font-size: 8px;
+    position: absolute;
+    top: 38%;
+    left: -10%;
+}
+
+/* hamburger */
+.toggle-div {
+    display: none;
+}
+.toggle-div .nav-item-div {
+    position: absolute;
+    background: #fff;
+    z-index: 3;
+    top: 10vh;
+    display: none;
+    left: 0%;
+    width: 100%;
+    box-shadow: -3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+}
+.toggle-div .toggle-ul {
+    list-style: none;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #e0e0e0;
+    
+}
+.toggle-div .list-item {
+    margin-bottom: 1.3rem;
+}
+.list-item a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+.nav-item-div .logout {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: 500;
+    color: #9898a2;
+}
+
+/* main section styling */
+.main {
+    max-width: 80%;
+    margin: 1em auto;
+}
+.main-img {
+    width: 100%;
+}
+.main-intro {
+    margin-bottom: 1.2em;
+}
+
+/* files section styling */
+.compare-files {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+
+.compare-files__title {
+    padding: 1em;
+    text-align: center;
+    
+}
+.compare-files__title > h4 {
+    color: #3f51b5;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-top: none;
+    padding: 1em 0.5em;
+    box-shadow: 0px 2px 2px #9898a2;
+}
+
+.compare-files__input > input {
+    padding: 0.75em 1em;
+    border: none;
+    box-shadow:  2px 2px 2px #9898a2;
+}
+
+.compare-btn-div {
+    display: grid;
+    place-items: center;
+    margin: 1em 0;
+}
+.compare-btn {
+    cursor: pointer;
+    padding: 1em 0.7em;
+    border-radius: 0.3em;
+}
+
+/* loader animation */
+#loader {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #3f51b5;
+    border-top: 4px solid #f25a41;
+    border-radius: 100%;
+    margin: auto;
+    animation: spin 1s infinite linear;
+}
+
+/* result section styles */
+.result-div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em;
+}
+.result > h4 {
+    text-align: center;
+}
+
+/* user guide styles */
+.guide {
+    background-color: #e0e0e0;
+    margin: 2em -15% 2em;
+    padding: 15%;
+    overflow-x: hidden;
+}
+/* style for both about and guide */
+.sub-section > h2 {
+    border-bottom: 1px solid #9898a2;
+    padding-bottom: .2em;
+}
+
+/* about us styles */
+.about-us {
+    margin: 3em 0;
+}
+
+/* footer */
+footer {
+    color: #9898a2;
+    text-align: center;
+}
+
+
+/* media-queries */
+
+@media (max-width: 768px) {
+    .links {
+        display: none;
+    }
+    .toggle-div {
+        display: block;
+    }
+}
+@media (min-width: 800px) {
+    .compare-files {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 2em;
+    }
+    .textarea-div {
+        width: 80vw;
+    }
+    textarea {
+        width: 100%;
+    }
+    
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
